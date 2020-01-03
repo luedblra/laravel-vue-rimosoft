@@ -7,7 +7,7 @@
         <h1 class="h1">CRUD laravel Vue LEBR</h1>
     </div>
     <div class="col-sm-7">
-        <a href="#" class="btn btn-primary pull-right"> Nueva tarea</a>
+        <a href="#" class="btn btn-primary pull-right" data-toggle="modal" data-target="#create" > Nueva tarea</a>
         <hr>
         <table class="table table-hover table-striped">
             <thead>
@@ -26,6 +26,7 @@
                 </tr>
             </tbody>
         </table>
+        @include('create')
     </div>
     <div class="col-sm-5">
         <pre>

@@ -10,7 +10,7 @@ class TaskController extends Controller
 
     public function index()
     {
-        $tasks = Task::all();
+        $tasks = Task::orderBy('id','DESC')->get();
         return $tasks;
     }
 
@@ -23,7 +23,11 @@ class TaskController extends Controller
 
     public function store(Request $request)
     {
-        //
+        $task = Task::create([
+            'keep' => $request->keep
+        ]);
+        
+        return response()->json(['success' => true]);
     }
 
 
